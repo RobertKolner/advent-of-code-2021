@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "advent-of-code-2021"
+version = "1.0.0"
+description = ""
+authors = ["Robert Kolner <robert.kolner@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+python-dotenv = "^0.19.2"
+
+[tool.poetry.dev-dependencies]
+ward = "^0.65.0-beta.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

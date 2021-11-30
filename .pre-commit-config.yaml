@@ -1,0 +1,39 @@
+repos:
+  - repo: local
+    hooks:
+      - id: export-requirements-txt
+        name: export-requirements-txt
+        entry: write_requirements.sh
+        language: script
+        types: [ python ]
+        pass_filenames: false
+        always_run: true
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-docstring-first
+      - id: check-yaml
+      - id: debug-statements
+      - id: name-tests-test
+  - repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+      - id: isort
+        name: Sort imports
+        args: ["--profile", "black"]
+  - repo: https://github.com/psf/black
+    rev: 19.3b0
+    hooks:
+      - id: black
+        args: [ "--line-length", "100" ]
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        additional_dependencies: [ flake8-typing-imports==1.10.0 ]
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
