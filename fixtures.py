@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 import os.path
 import pathlib
+import sys
 from typing import Union
 
 import requests
@@ -41,3 +43,10 @@ def _save_to_cache(year: str, day: str, data: str) -> None:
     cache_file = cache_dir / f"data_{year}_{day}.cache"
     with open(str(cache_file), "w") as f:
         f.write(data)
+
+
+if __name__ == "__main__":
+    try:
+        sys.stdout.write(load("2021", sys.argv[1]))
+    except IndexError:
+        sys.stderr.write(f"Usage: {sys.argv[0]} <day>\n")
