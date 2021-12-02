@@ -12,4 +12,4 @@ poetry install
 ```
 
 To run a script for a single day, use:
-```poetry run ./fixtures.py <day> | poetry run ./challenges/dayNNv```
+```poetry run ./fixtures.py <day> | poetry run python challenges/dayNNv```
