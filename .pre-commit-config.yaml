@@ -1,13 +1,4 @@
 repos:
-  - repo: local
-    hooks:
-      - id: export-requirements-txt
-        name: export-requirements-txt
-        entry: write_requirements.sh
-        language: script
-        types: [ python ]
-        pass_filenames: false
-        always_run: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:

@@ -16,11 +16,11 @@ values_str = """
 """.strip()
 
 
-@ward.test("day 5")
+@ward.test("day 5a")
 def _():
     assert 5 == day05a.run(values_str)
 
 
-@ward.test("day 4b")
+@ward.test("day 5b")
 def _():
     assert 12 == day05b.run(values_str)
