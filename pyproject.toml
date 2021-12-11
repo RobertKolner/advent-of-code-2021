@@ -8,6 +8,7 @@ authors = ["Robert Kolner <robert.kolner@gmail.com>"]
 python = "^3.9"
 requests = "^2.26.0"
 python-dotenv = "^0.19.2"
+numpy = "^1.21.4"
 
 [tool.poetry.dev-dependencies]
 ward = "^0.65.0-beta.0"
