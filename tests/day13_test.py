@@ -34,5 +34,4 @@ def _():
 
 @ward.test("day 13b")
 def _():
-    ...
     assert day13b.run(values_str) is None  # The puzzle output is read manually
